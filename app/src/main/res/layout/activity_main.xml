@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121417"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎮 Controller for Ludo King"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E2229"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔗 Select Paired Host Device"
+                android:textColor="#B0B8C4"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/spinnerDevices"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#2A2F3A"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Refresh"
+                    android:backgroundTint="#3A4150"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btnConnect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Connect"
+                    android:backgroundTint="#2E7D32"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvConnectionStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📶 Status: Disconnected"
+                android:textColor="#FF5252"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E2229"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvSelectedPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Player: RED"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2">
+
+                <Button
+                    android:id="@+id/btnRed"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#D32F2F"
+                    android:text="🔴 RED"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnGreen"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#388E3C"
+                    android:text="🟢 GREEN"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBlue"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#1976D2"
+                    android:text="🔵 BLUE"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnYellow"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FBC02D"
+                    android:text="🟡 YELLOW"
+                    android:textColor="#121417"
+                    android:textStyle="bold" />
+            </GridLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E2229"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎲 Select Dice Value (Sends Immediately)"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <Button
+                    android:id="@+id/btnDice1"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#2C323D"
+                    android:text="1"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDice2"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#2C323D"
+                    android:text="2"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDice3"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#2C323D"
+                    android:text="3"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDice4"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#2C323D"
+                    android:text="4"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDice5"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#2C323D"
+                    android:text="5"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btnDice6"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FF6F00"
+                    android:text="6"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF" />
+            </GridLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🔌 Disconnect"
+            android:backgroundTint="#B71C1C"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvGameStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E2229"
+            android:padding="12dp"
+            android:text="ℹ️ Ready. Pair devices in Android Bluetooth settings first."
+            android:textColor="#80CBC4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
